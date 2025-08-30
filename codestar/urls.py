@@ -18,8 +18,13 @@ from django.contrib import admin
 from django.urls import path , include
 
 
+
+from django.contrib import admin
+from django.urls import path, include
+
 urlpatterns = [
-    path("", include("blog.urls"), name="blog-urls"),
-    path('summernote/', include('django_summernote.urls')),
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("about/", include("about.urls")),   # <-- add this
+    path("summernote/", include("django_summernote.urls")),
+    path("", include("blog.urls"), name="blog-urls"),  # keep blog last
 ]
