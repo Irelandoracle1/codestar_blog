@@ -9,7 +9,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings
 SECRET_KEY = 'django-insecure-9p)g(3mfgnl+i$uk#=v=3es1xjy_%b)@dk2=-2n+65o97jr^3)'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
 # Application definition
@@ -26,6 +26,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,6 +84,8 @@ USE_TZ = True
 # Static files
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type
