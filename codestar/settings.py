@@ -12,7 +12,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # Quick-start settings
 # -----------------------
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-default-key')
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'bloged-project-88660c5a7dd5.herokuapp.com',
